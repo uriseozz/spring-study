@@ -129,6 +129,9 @@ spring이 Controll에서 viewResolver에 return 값으로 hello-template, model�
 ## 3. 회원 관리 예제 - 백엔드 개발
 ### 1) 비즈니스 요구사항 정리
 ### 2) 회원 도메인과 리포지토리 만들기
+* Otional : java8에 등장, null값을 처리할 때 사용
+* 예시) ```Optional<Member> findById(Long id);```
+
 ### 3) 회원 리포지토리 테스트 케이스 작성
 ```
     public void clearStore() {
@@ -288,4 +291,31 @@ spring.datasource.username=sa
 
 ## 7. AOP
 ### 1) AOP가 필요한 상황
+**상황**
+* 모든 메소드의 호출 시간을 측정하고 싶다면?
+* 공통 관심 사항(cross-cutting concern) vs 핵심 관심 사항(core concern)
+* 회원 가입 시간, 회원 조회 시간을 측정하고 싶다면?</br>
+
+**문제**
+* 회원가입, 회원 조회에 시간을 측정하는 기능은 핵심 관심 사항이 아니다.
+* 시간을 측정하는 로직은 공통 관심 사항이다.
+* 시간을 측정하는 로직과 핵심 비즈니스의 로직이 섞여서 유지보수가 어렵다.
+* 시간을 측정하는 로직을 별도의 공통 로직으로 만들기 매우 어렵다.
+* 시간을 측정하는 로직을 변경할 때 모든 로직을 찾아가면서 변경해야 한다.
+</br>
 ### 2) AOP 적용
+#### AOP: Aspect Oriented Programming
+* 공통 관심 사항(cross-cutting concern) vs 핵심 관심 사항(core concern) 분리
+* AOP에는 ```@Aspect``` 사용
+* @Component or @Bean 사용
+* AOP는 프록시라는 가짜 class 사용
+![img_2.png](img_2.png)
+</br>
+</br>
+
+**문제 해결**
+* 회원가입, 회원 조회등 핵심 관심사항과 시간을 측정하는 공통 관심 사항을 분리한다.
+* 시간을 측정하는 로직을 별도의 공통 로직으로 만들었다.
+* 핵심 관심 사항을 깔끔하게 유지할 수 있다.
+* 변경이 필요하면 이 로직만 변경하면 된다.
+* 원하는 적용 대상을 선택할 수 있다.
