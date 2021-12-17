@@ -1,4 +1,4 @@
-# 스프링 입문 강의 학습
+# 📙스프링 입문 강의 학습
 <p>코드로 배우는 스프링 부트, 웹 MVC, DB 접근 기술 / 김영한</p>
 <a href="https://www.inflearn.com/course/스프링-입문-스프링부트/dashboard">강의 바로가기</a>
 
@@ -13,7 +13,7 @@
    1. 정적컨텐츠
    2. MVC와 템플릿 엔진
    3. API
-3. 회원 관리 예제 - 백엔드 개발
+3. <a hrlf = "https://github.com/uriseozz/spring-study/tree/main/%EC%8A%A4%ED%94%84%EB%A7%81_%EC%9E%85%EB%AC%B8(%EA%B9%80%EC%98%81%ED%95%9C)_inflearn/hello-spring#3-%ED%9A%8C%EC%9B%90-%EA%B4%80%EB%A6%AC-%EC%98%88%EC%A0%9C---%EB%B0%B1%EC%97%94%EB%93%9C-%EA%B0%9C%EB%B0%9C">회원 관리 예제 - 백엔드 개발</a>
    1. 비즈니스 요구사항 정리
    2. 회원 도메인과 리포지토리 만들기
    3. 회원 리포지토리 테스트 케이스 작성
@@ -35,9 +35,11 @@
    6. 스프링 데이터 JPA
 7. AOP
    1. AOP가 필요한 상황
-   2. AOp 적용
+   2. AOP 적용
+</br>
 
 ---
+</br>
 
 ## 1. 프로젝트 환경설정
 ### 1) 프로젝트 생성
@@ -68,6 +70,8 @@ Gradle은 의존관계가 있는 라이브러리를 함께 다운로드
   * mockito: 목 라이브러리
   * assertj: 테스트 코드를 좀 더 편하게 작성하게 도와주는 라이브러리
   * spring-test: 스프링 통합 테스트 지원
+</br>
+</br>
 
 ### 3) View 환경설정
 컨트롤러에서 리턴값으로 문자를 반환하면 viewResolver가 화면을 찾아 처리
@@ -83,14 +87,19 @@ public String hello(Model model) {
 ```
 hello.html</br>
 ```<p th:text="'안녕하세요. ' + ${data}" >안녕하세요. 손님</p>```
+</br>
+</br>
 
 ### 4) 빌드하고 실행하기
-
+</br>
+</br>
 
 ## 2. 스프링 웹개발 기초
 ### 1) 정적 컨텐츠
 스프링부터 정적 컨턴츠 기능 </br>
 https://docs.spring.io/spring-boot/docs/2.3.1.RELEASE/reference/html/spring-boot-features.html#boot-features-spring-mvc-static-content
+</br>
+</br>
 
 ### 2) MVC와 템플릿 엔진
 Model, View, Controller</br>
@@ -102,16 +111,20 @@ public String helloMvc(@RequestParam("name") String name, Model model) {
 }
 ```
 
-Controller와 Model을 통해 view에 값을 넘겨줌
+Controller와 Model을 통해 view에 값을 넘겨줌</br>
 ![img_7.png](img_7.png)
 
 spring이 Controll에서 viewResolver에 return 값으로 hello-template, model로 name값을 넘겨줌</br>
 ![img_9.png](img_9.png)</br>
+</br>
+</br>
 
 ### 3) API
 * ```@ResponseBody```를 사용하면 viewResolver를 사용하지 않고 HTTP의 Body에 문자내용을 직접반환(JSON으로)</br>
 * viewResolver 대신 ```HttpMessageConverter```가 동작
 ![img_1.png](img_1.png)
+</br>
+</br>
 
 ## 3. 회원 관리 예제 - 백엔드 개발
 ### 1) 비즈니스 요구사항 정리
@@ -156,8 +169,12 @@ private void validateDuplicateMember(Member member) {   // Optionall 생략가�
         });
 }
 ```
-### 5) 회원 서비스 테스트
+</br>
+</br>
 
+### 5) 회원 서비스 테스트
+</br>
+</br>
 
 ## 4. 스프링 빈과 의존관계
 ### 1) 컴퓨넌트 스캔과 자동 의존관계 설정
@@ -212,11 +229,16 @@ public class SpringConfig {
 **<참고사항>**
 * 정형화 되지 않거나, 상황에 따라 구현 클래스를 변경해야 하면 설정을 통해 스프링빈으로 등록
 * @Autowired를 통한 DI는 Controller, Service 등과 같이 스프링이 관리하는 객체에서만 동작
+</br>
+</br>
 
 ## 5. 회원관리 예제 - 웹 MVC 개발
 ### 1) 회원 웹 기능 - 홈화면 추가
 ### 2) 회원 웹 기능 - 등록
 ### 3) 회원 웹 기능 - 조회
+</br>
+</br>
+
 ## 6. 스프링 DB 접근 기술
 ### 1) H2 데이터베이스 설치
 ### 2) 순수 JDBC
@@ -224,6 +246,9 @@ public class SpringConfig {
 ### 4) 스프링 JdbcTemplate
 ### 5) JPA
 ### 6) 스프링 데이터 JPA
+</br>
+</br>
+
 ## 7. AOP
 ### 1) AOP가 필요한 상황
 ### 2) AOP 적용
