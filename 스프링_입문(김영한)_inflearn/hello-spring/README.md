@@ -4,7 +4,7 @@
 
 
 ### 커리큘럼
-1. 프로젝트 환경설정
+1. <a hrdf="https://github.com/uriseozz/spring-study/blob/main/%EC%8A%A4%ED%94%84%EB%A7%81_%EC%9E%85%EB%AC%B8(%EA%B9%80%EC%98%81%ED%95%9C)_inflearn/hello-spring/README.md#1-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%ED%99%98%EA%B2%BD%EC%84%A4%EC%A0%95">프로젝트 환경설정</a>
    1. 프로젝트 생성
    2. 라이브러리 살펴보기
    3. View 환경설정
@@ -13,7 +13,7 @@
    1. 정적컨텐츠
    2. MVC와 템플릿 엔진
    3. API
-3. <a hrlf = "https://github.com/uriseozz/spring-study/tree/main/%EC%8A%A4%ED%94%84%EB%A7%81_%EC%9E%85%EB%AC%B8(%EA%B9%80%EC%98%81%ED%95%9C)_inflearn/hello-spring#3-%ED%9A%8C%EC%9B%90-%EA%B4%80%EB%A6%AC-%EC%98%88%EC%A0%9C---%EB%B0%B1%EC%97%94%EB%93%9C-%EA%B0%9C%EB%B0%9C">회원 관리 예제 - 백엔드 개발</a>
+3. 회원 관리 예제 - 백엔드 개발
    1. 비즈니스 요구사항 정리
    2. 회원 도메인과 리포지토리 만들기
    3. 회원 리포지토리 테스트 케이스 작성
