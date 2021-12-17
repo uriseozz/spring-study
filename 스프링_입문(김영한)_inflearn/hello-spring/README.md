@@ -4,7 +4,7 @@
 
 
 ### 커리큘럼
-1. <a hrdf="https://github.com/uriseozz/spring-study/blob/main/%EC%8A%A4%ED%94%84%EB%A7%81_%EC%9E%85%EB%AC%B8(%EA%B9%80%EC%98%81%ED%95%9C)_inflearn/hello-spring/README.md#1-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%ED%99%98%EA%B2%BD%EC%84%A4%EC%A0%95">프로젝트 환경설정</a>
+1. 프로젝트 환경설정
    1. 프로젝트 생성
    2. 라이브러리 살펴보기
    3. View 환경설정
