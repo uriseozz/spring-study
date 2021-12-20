@@ -1,8 +1,5 @@
 package com.sparta.week04.controller;
 
-import com.sparta.week04.models.Product;
-import com.sparta.week04.models.ProductRepository;
-import com.sparta.week04.models.ProductRequestDto;
 import com.sparta.week04.service.ProductService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.GetMapping;
