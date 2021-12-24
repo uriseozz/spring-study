@@ -121,7 +121,7 @@ spring이 Controll에서 viewResolver에 return 값으로 hello-template, model�
 
 ### 3) API
 * ```@ResponseBody```를 사용하면 viewResolver를 사용하지 않고 HTTP의 Body에 문자내용을 직접반환(JSON으로)</br>
-* viewResolver 대신 ```HttpMessageConverter```가 동작
+* viewResolver 대신 ```HttpMessageConverter```가 동작</br>
 ![img_1.png](img_1.png)
 </br>
 </br>
