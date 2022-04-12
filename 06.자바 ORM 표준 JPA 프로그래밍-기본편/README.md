@@ -121,5 +121,55 @@
 * 테스트서버는 update 또는 validate
 * 스테이징과운영서버는 validate 또는 none
 ### 3) 필드와 컬럼매핑
+![img_3.png](img_3.png)
+
+**@Column**
+* 속성 
+  * name
+  * insertable/updatable : 등록/변경 가능여부, 기본값 : TRUE
+  * nullable
+  * unique : @Table의 uniqueConstraints와 같음
+  * columnDefinition : DB의 컬럼정보를 직접 줄 수 있음
+  * length
+  * precision/scale
+
+**@Enumerated**
+* 자바 enum타입을 매핑할 때 사용
+* 속성 : value
+  * EnumType.ORDINAL : enum 순서를 데이터베이스에 저장(기본값, 사용X)
+  * EnumType.STRING : enum 이름을 데이터베이스에 저장
+
+**@Temporal**
+* 날짜 타입을 매핑할 때 사용
+* LocalDate, LocalDateTime을 사용할 때는 생략가능(최신 하이버네이트 지원)
+
+**@LOB**
+* LOB은 TEXT, 그래픽, 이미지, 비디오, 사운드 등 구조화되지 않은 대형 데이터를 저장 목적
+* @Lob에는 지정할 수 있는 속성이 없음
+* 데이터베이스 BLOB, CLOB 타입과 매핑
+  * BLOB
+    * 이진 대형 객체 (Binary), 이미지, 동영상, MP3 등...
+    * 비 전통적인 데이터 보관용
+  * CLOB
+    * 문자 대형 객체 (Character), Oracle Server는 CLOB과 VARCHAR2 사이에 암시적 변환을 수행
+    * 문자 기반 데이터 보관용
+    
 ### 4) 기본키 매핑
+**기본키 매핑 어노테이션**
+* @Id : 직접할당
+* @GeneratedValue : 자동생성
+  * IDENTITY: 데이터베이스에 위임, MYSQL
+  * SEQUENCE: 데이터베이스 시퀀스 오브젝트 사용, ORACLE
+    * @SequenceGenerator 필요
+  * TABLE: 키 생성용 테이블 사용, 모든 DB에서 사용
+    * @TableGenerator 필요
+  * AUTO: 방언에 따라 자동 지정, 기본값
+
+**권장하는 식별자 전략**
+* 기본 키 제약 조건: null 아님, 유일, **변하면 안됨**
+* 미래까지 이 조건을 만족하는 자연키는 찾기 어렵다. 대리키(대체키)를 사용
+* 예를 들어 주민등록번호도 기본 키로 적절하지 않음
+* **권장: Long형 + 대체키 + 키 생성전략 사용**
+
+
 ### 5) 실전예제 1 - 요구사항 분석과 기본 매핑

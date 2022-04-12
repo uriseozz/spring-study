@@ -23,7 +23,7 @@ public class JpaMain {
             // 비영속
             Member member = new Member();
             member.setId(2L);
-            member.setName("HelloB");
+            member.setUsername("HelloB");
 
             //영속 : DB저장 X, 1차 캐시에 저장
             em.persist(member);
